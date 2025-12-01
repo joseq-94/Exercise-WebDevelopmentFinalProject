@@ -1,0 +1,49 @@
+:root {
+    --border: black 1px solid;
+}
+/*mobile layout*/
+body {
+    display: grid;
+    grid-template-rows: 1fr minmax(650px, auto) minmax(100px, auto);
+}
+.site-header {
+    background-color: #F0F4F8;
+    color: #ED2939;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    border: var(--border);
+    border-bottom: 3px solid #000000;
+
+    position: sticky;
+    top: 0;
+}
+
+button {
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+header nav ul {
+    display: none;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+main {
+    background: #F0F4F8;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: var(--border);
+}
