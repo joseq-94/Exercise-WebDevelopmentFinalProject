@@ -1,9 +1,28 @@
 :root {
     --border: black 1px solid;
 }
-/*mobile layout*/
-body {
-    display: grid;
-    grid-template-rows: 1fr minmax(650px, auto) minmax(100px, auto);
+/* Mobile layout */
+
+#mainMenu {
+    display: none;
 }
+
+.toggleMenu {
+    display: block;
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+    #mainMenu {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .toggleMenu {
+        display: none;
+    }
+}
+
+
 

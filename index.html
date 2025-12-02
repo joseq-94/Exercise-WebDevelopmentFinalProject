@@ -18,42 +18,19 @@
             "Final Project Web Development"
         </h1>
         <nav class="pt-8">
-            <div class="group relative dropdown">
-                <section class="group-hover: block drop-down absolute right-1 hidden h-auto transition duration-500 ease-in-out">
-                    <ul class="hamburger_nav top-0 w-24 shadow px-2 py-4 gap-1 text-end rounded-b-lg">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="./Contact.html">Contact</a>
-                        </li>
-                        <li>
-                            <a href="./Resume.html">Resume</a>
-                        </li>
-                        <li>
-                            <a href="/RecentProject.html">RecentProject</a>
-                        </li>
-                        <li>
-                            <a href="/CompletedProject.html">CompletedProject</a>
-                        </li>
-                        <li>
-                            <a href="./">About</a>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-            <ul class="Top-nav flex flex-row gap-4 w-full">
+            <ul id="mainMenu" class="hidden lg:flex flex-row gap-4 w-full">
                 <li><a class="border border-t-0 border-x-0" href="./index.html">Home</a></li>
                 <li><a class="border border-t-0 border-x-0" href="./Contact.html">Contact</a></li>
                 <li><a class="border border-t-0 border-x-0" href="./Resume.html">Resume</a></li>
                 <li><a class="border border-t-0 border-x-0" href="./RecentProject.html">RecentProject</a></li>
                 <li><a class="border border-t-0 border-x-0" href="./CompletedProject.html">CompletedProject</a></li>
-                <li><a class="border border-t-0 border-x-0" href="./">About</a></li>
+                <li><a class="border border-t-0 border-x-0" href="./AboutMe.html">About</a></li>
             </ul>
+            <button  id="toggleMenu" class="toggleMenu lg:hidden">☰</button>
         </nav>
     </header>
     <main class="w-4/5 pb-8 text-center mx-auto min-h-screen flex items-center justify-center">
-        <section class="grid grid-cols-3 grid-rows-2 gap-6">
+        <section class="grid grid-cols-3 grid-rows-2 gap-6 ">
             <section class="col-start-1 row-start-1 p-2">
                 <a class="w-full p-4 block border border-black rounded-lg" href="./Contact.html">
                     <h2 class="justify-self-center text-xl font-bold">Contact</h2>
@@ -68,13 +45,13 @@
             </section>
             <section class="col-start-3 row-start-1 p-2">
                 <a class="w-full p-4 block border border-black rounded-lg" href="RecentProject.html">
-                    <h2 class="justify-self-center text-xl font-bold">RecentProject</h2>
+                    <h2 class="justify-self-center text-xl font-bold">Recent Project</h2>
                     <p class="justify-self-center">Last Project Done</p>
                 </a>
             </section>
             <section class="col-start-1 row-start-2 p-2">
                 <a class="w-full p-4 block border border-black rounded-lg" href="CompletedProject.html">
-                    <h2 class="justify-self-center text-xl font-bold">CompletedProjects</h2>
+                    <h2 class="justify-self-center text-xl font-bold">Completed Projects</h2>
                     <p class="justify-self-center">Projects From Programming Certificate IV</p>
                 </a>
             </section>
