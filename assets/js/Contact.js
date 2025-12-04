@@ -13,8 +13,12 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {e
     let isValid = true;
 
     // Validate Name
+    let nameRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,20}$/;
     if (name === '') {
         document.getElementById('nameError').textContent = 'Name is required';
+        isValid = false;}
+    else if (!nameRegex.test(name)) {
+        document.getElementById('nameError').textContent = 'Name must contain only letters and more than 3 characters';
         isValid = false;
     }
 
@@ -27,15 +31,17 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {e
         document.getElementById('emailError').textContent = 'Valid email is required';
         isValid = false;
     }
-
     // Validate Message
+    let messageRegex = /^(?!\s*$).{10,500}$/;
+
     if (message === '') {
         document.getElementById('messageError').textContent = 'Message cannot be empty';
         isValid = false;
     }
+    else if (!messageRegex.test(message)) {
+        document.getElementById('messageError').textContent = 'Message must be at least 10 characters';
+        isValid = false;}
 
     if (isValid) {
-        alert('Form submitted successfully!');
-        // Here you can send data to server using fetch or AJAX
-    }
+        alert('Form submitted successfully!')}
     });
